@@ -8,8 +8,11 @@
   <title>jQuery phone and E-mail mask</title>
 </head>
 <body>
-  <input type="tel" id="phone" placeholder="Введите телефон">
-  <input type="text" id="email" placeholder="Введите E-mail">
+  <form action="" id="form">
+    <input type="tel" id="phone" name="phone" placeholder="Введите телефон">
+    <input type="email" id="email" name="email" placeholder="Введите E-mail">
+    <input type="submit" value="Submit">
+  </form>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="jquery.maskedinput.js"></script>

@@ -1,5 +1,21 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
 input {
   border: 2px solid pink;
   border-radius: 5px;
   padding: 10px 20px;
+  margin-bottom: 5px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+ 
+label.error {
+  display: inline;
 }
