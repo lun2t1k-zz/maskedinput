@@ -12,7 +12,18 @@ input {
 }
 
 input[type="submit"] {
+  background-color: pink;
+  color: white;
   cursor: pointer;
+}
+
+.disabled-btn {
+  background-color: grey !important;
+  border: 2px solid grey !important;
+}
+
+input[disabled] {
+  cursor: default;
 }
 
 .error {
