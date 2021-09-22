@@ -17,7 +17,17 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+input[type="submit"]:hover {
+  background-color: #ff95a7;
+  border: 2px solid #ff95a7;
+}
+
 .disabled-btn {
+  background-color: grey !important;
+  border: 2px solid grey !important;
+}
+
+.disabled-btn:hover {
   background-color: grey !important;
   border: 2px solid grey !important;
 }
