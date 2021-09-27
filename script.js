@@ -24,6 +24,7 @@ $(document).ready(function() {
         if($(this).val() != '') {
           $(':input[type="submit"]').prop('disabled', false);
           $(':input[type="submit"]').removeClass('disabled-btn');
+          $('.error').remove();
         }
       });
     }
@@ -36,22 +37,25 @@ $(document).ready(function() {
         if($(this).val() != '') {
           $(':input[type="submit"]').prop('disabled', false);
           $(':input[type="submit"]').removeClass('disabled-btn');
+          $('.error').remove();
         }
       });
     } 
-    // else {
-    //   var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
-    //   var validEmail = regEx.test(email);
+    else {
+      var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
+      var validEmail = regEx.test(email);
       
-    //   if (!validEmail) {
-    //     $('#email').after('<span class="error">Enter a valid email</span>');
-    //     $(':input[type="submit"]').prop('disabled', true);
-    //     $('input[type="email"]').keyup(function() {
-    //       if($(this).val() != '') {
-    //         $(':input[type="submit"]').prop('disabled', false);
-    //       }
-    //     });
-    //   }
-    // }
+      if (!validEmail) {
+        $('#email').after('<span class="error">Enter a valid email</span>');
+        $(':input[type="submit"]').prop('disabled', true);
+        $('input[type="email"]').keyup(function() {
+          if($(this).val() != '') {
+            $(':input[type="submit"]').prop('disabled', false);
+            $(':input[type="submit"]').removeClass('disabled-btn');
+            $('.error').remove();
+          }
+        });
+      }
+    }
   });
 });
